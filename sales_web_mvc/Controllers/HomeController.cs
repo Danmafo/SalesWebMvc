@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using sales_web_mvc.Models;
+using sales_web_mvc.Models.ViewModels;
 
 namespace sales_web_mvc.Controllers {
     public class HomeController : Controller {
