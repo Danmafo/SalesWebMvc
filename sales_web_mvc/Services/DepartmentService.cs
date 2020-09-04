@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Collections.Generic;
 using sales_web_mvc.Models;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace sales_web_mvc.Services {
     public class DepartmentService {
@@ -12,8 +14,8 @@ namespace sales_web_mvc.Services {
             _context = context;
         }
 
-        public List<Department> FindAll() {
-            return _context.Department.OrderBy(x => x.Name).ToList();
+        public async Task<List<Department>> FindAllAsync() {
+            return await _context.Department.OrderBy(x => x.Name).ToListAsync();
         }
     }
 }
